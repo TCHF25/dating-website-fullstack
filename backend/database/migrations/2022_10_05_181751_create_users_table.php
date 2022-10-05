@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("location");
             $table->integer("age");
             $table->string("gender");
-            $table->string("intrested_in");
+            $table->string("interested_in");
             $table->string("profile_picture_url")->default('NA');
             $table->timestamps();
         });
