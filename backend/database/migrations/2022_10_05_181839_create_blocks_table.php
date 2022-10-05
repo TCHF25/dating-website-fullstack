@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('blocks', function (Blueprint $table) {
-            $table->id();
+            $table->integer('blocking_id')->references('id')->on('users');
+            $table->integer('blocked_id')->references('id')->on('users');
             $table->timestamps();
+
+            $table->primary(['blocking_id', 'blocked_id']);
         });
     }
 
